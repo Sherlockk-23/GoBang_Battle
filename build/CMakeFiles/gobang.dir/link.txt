@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -Wall -shared -Wl,-soname,libgobang.so -o libgobang.so CMakeFiles/gobang.dir/src/board.cpp.o CMakeFiles/gobang.dir/src/strategy.cpp.o CMakeFiles/gobang.dir/src/robot1.cpp.o CMakeFiles/gobang.dir/src/player.cpp.o CMakeFiles/gobang.dir/src/game.cpp.o 

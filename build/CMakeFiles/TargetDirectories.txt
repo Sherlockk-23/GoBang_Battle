@@ -1,4 +1,0 @@
-/home/qinzk23/GoBang_Battle/build/CMakeFiles/GoBang_Battle.dir
-/home/qinzk23/GoBang_Battle/build/CMakeFiles/main.dir
-/home/qinzk23/GoBang_Battle/build/CMakeFiles/edit_cache.dir
-/home/qinzk23/GoBang_Battle/build/CMakeFiles/rebuild_cache.dir
