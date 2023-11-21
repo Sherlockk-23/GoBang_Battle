@@ -3,7 +3,8 @@ CMakeFiles/GoBang_Battle.dir/src/player.cpp.o: \
  /home/qinzk23/GoBang_Battle/include/player.h \
  /home/qinzk23/GoBang_Battle/include/board.h \
  /home/qinzk23/GoBang_Battle/include/strategy.h \
- /home/qinzk23/GoBang_Battle/include/robot1.h /usr/include/c++/11/cstring \
+ /home/qinzk23/GoBang_Battle/include/robot1.h \
+ /home/qinzk23/GoBang_Battle/include/robot2.h /usr/include/c++/11/cstring \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

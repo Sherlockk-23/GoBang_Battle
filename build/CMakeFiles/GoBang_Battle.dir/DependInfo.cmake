@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/qinzk23/GoBang_Battle/src/game.cpp" "CMakeFiles/GoBang_Battle.dir/src/game.cpp.o" "gcc" "CMakeFiles/GoBang_Battle.dir/src/game.cpp.o.d"
   "/home/qinzk23/GoBang_Battle/src/player.cpp" "CMakeFiles/GoBang_Battle.dir/src/player.cpp.o" "gcc" "CMakeFiles/GoBang_Battle.dir/src/player.cpp.o.d"
   "/home/qinzk23/GoBang_Battle/src/robot1.cpp" "CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o" "gcc" "CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o.d"
+  "/home/qinzk23/GoBang_Battle/src/robot2.cpp" "CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o" "gcc" "CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o.d"
   "/home/qinzk23/GoBang_Battle/src/strategy.cpp" "CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o" "gcc" "CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o.d"
   )
 

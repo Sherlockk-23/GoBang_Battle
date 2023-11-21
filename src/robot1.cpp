@@ -53,20 +53,13 @@ void Bot1::init_map_(const Board* board,bool is_black){
 
 }
 
-void Bot1::init_value_map_(){
-    const static int A_five= 1e8;
-    const static int B_five= 1e7;
-    const static int A_four_free = 3e6;
-    const static int B_four_free = 5e5;
+void Bot1::init_value_map_(){          // a lot of code waste
+    const int _five [2] =         {(int)1e8,(int)1e7};
+    const int _four_free [2] =    {(int)3e6,(int)5e5};
+    const int _four_dead [2] =    {10000,5000};
+    const int _three_free [2] =   {30000,10000};
+    const int _two_free [2] =     {1000,200};
 
-    const static int A_four_dead = 10000;
-    const static int B_four_dead = 5000;
-
-    const static int A_three_free = 30000;
-    const static int B_three_free = 10000;
-
-    const static int A_two_free = 1000;
-    const static int B_two_free = 200;
 
     #define here value_map_[id_map(i,j)]
     
@@ -75,74 +68,53 @@ void Bot1::init_value_map_(){
     all_ij
         value_map_[id_map(i,j)]=0;
 
-    all_ij if(map_[id_map(i,j)]==EMPTY)
-    for(int dir=0;dir<4;dir++)
-    {
-        int AlenL,AlenR,AfreeL,AfreeR;
-        AlenL=get_len_(i,j,dir,ALLY);
-        AlenR=get_len_(i,j,dir+4,ALLY);
-        AfreeL=get_free_(i,j,dir,ALLY);
-        AfreeR=get_free_(i,j,dir+4,ALLY);
-
-        if ( AlenL+AlenR>=4 )
-            here += A_five;
-        if ( AlenL+AlenR==3 ) {
-            if( AfreeL && AfreeR )
-                here += A_four_free;
-            else if ( AfreeL || AfreeR )
-                here += A_four_dead;
-        }
-        if ( AlenL+AlenR==2 ){
-            if( (AfreeL>=2 && AfreeR ) || (AfreeL && AfreeR >=2) )
-                here += A_three_free;
-
-        }
-        if( AlenL || AlenR ){
-            if( (AfreeL>=2 && AfreeR>=3 ) || (AfreeL>=3 && AfreeR >=2) )
-                here += A_two_free;
-        }
-
-        int BlenL,BlenR,BfreeL,BfreeR;
-        BlenL=get_len_(i,j,dir,OPON);
-        BlenR=get_len_(i,j,dir+4,OPON);
-        BfreeL=get_free_(i,j,dir,OPON);
-        BfreeR=get_free_(i,j,dir+4,OPON);
-
-        if ( BlenL+BlenR>=4 )
-            here += B_five;
-        if ( BlenL+BlenR==3 ) {
-            if( BfreeL && BfreeR )
-                here += B_four_free;
-            else if ( BfreeL || BfreeR )
-                here += B_four_dead;
-        }
-        if ( BlenL+BlenR==2 ){
-            if( (BfreeL>=2 && BfreeR ) || (BfreeL && BfreeR >=2) )
-                here += B_three_free;
-
-        }
-        if( BlenL || BlenR ){
-            if( (BfreeL>=2 && BfreeR>=3 ) || (BfreeL>=3 && BfreeR >=2) )
-                here += B_two_free;
-        }
-
-
-
-    }
-
-        
-
     
 
-    all_ij{
-        value_map_[id_map(i,j)] +=
-            ( pow (i*(size_-i) , 2 ) + pow( j*(size_-j) ,2) )  /  (size_*size_/2)
-            + rand()%(size_*size_/2);
+    all_ij if(map_[id_map(i,j)]==EMPTY)
+    for(int dir=0;dir<4;dir++)
+    for(int side=1;side<=2;side++)
+    {
+        int lenL,lenR,freeL,freeR;
+        lenL=get_len_(i,j,dir,side);
+        lenR=get_len_(i,j,dir+4,side);
+        freeL=get_free_(i,j,dir,side);
+        freeR=get_free_(i,j,dir+4,side);
+
+        if ( lenL+lenR>=4 )
+            here += _five[side&1^1];
+        if ( lenL+lenR==3 ) {
+            if( freeL && freeR )
+                here += _four_free[side&1^1];
+            else if ( freeL || freeR )
+                here += _four_dead[side&1^1];
+        }
+        if ( lenL+lenR==2 ){
+            if( (freeL>=2 && freeR ) || (freeL && freeR >=2) )
+                here += _three_free[side&1^1];
+
+        }
+        if( lenL || lenR ){
+            if( (freeL>=2 && freeR>=3 ) || (freeL>=3 && freeR >=2) )
+                here += _two_free[side&1^1];
+        }
+
     }
+
+
+    int cnt=0;                              //  more random at start
+    all_ij cnt+=map_[id_map(i,j)]!=EMPTY;
+    if(cnt<=5){
+    all_ij{
+        here +=
+            ( pow (i*(size_-i) , 2 ) + pow( j*(size_-j) ,2) )  /  (size_*size_/4)
+            + rand()%(size_*size_/3);
+    }
+    }
+
 
     all_ij{
         if(map_[id_map(i,j)]!=EMPTY)
-            value_map_[id_map(i,j)]=-1;
+            here =-1;
     }
     #undef here
 }
@@ -151,6 +123,10 @@ void Bot1::get_pos(const Board* board,bool is_black,int &x,int &y){
     srand(time(0));
     init_map_(board,is_black);
     init_value_map_();
+
+
+    // see robot2
+
 
     //show_map_(value_map_);
 
@@ -162,7 +138,7 @@ void Bot1::get_pos(const Board* board,bool is_black,int &x,int &y){
 
     x++;y++;
 
-    cout<<x<<' '<<y<<endl;
+    std::cout<<x<<' '<<y<<std::endl;
 }
 
 int Bot1::get_len_(int x,int y,int dir,int is_A)const{
@@ -177,7 +153,9 @@ int Bot1::get_len_(int x,int y,int dir,int is_A)const{
     return len;
 }
 
-int Bot1::get_free_(int x,int y,int dir,int is_A)const{
+
+
+int Bot1::get_free_(int x,int y,int dir,int is_A)const{  
     int len=0;
     x+=move_x[dir];y+=move_y[dir];
     if( (!inmap(x,y)) || map_[id_map(x,y)]== 3-is_A )

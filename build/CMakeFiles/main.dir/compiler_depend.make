@@ -9,8 +9,11 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
   ../include/player.h \
   ../include/strategy.h \
   ../include/robot1.h \
+  ../include/robot2.h \
   ../include/player.h
 
+
+../include/robot2.h:
 
 ../include/robot1.h:
 

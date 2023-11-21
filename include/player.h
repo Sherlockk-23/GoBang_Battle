@@ -4,6 +4,7 @@
 #include "board.h"
 #include "strategy.h"
 #include "robot1.h"
+#include "robot2.h"
 
 
 namespace gobang {

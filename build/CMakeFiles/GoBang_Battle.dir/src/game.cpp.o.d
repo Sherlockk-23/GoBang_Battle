@@ -5,6 +5,7 @@ CMakeFiles/GoBang_Battle.dir/src/game.cpp.o: \
  /home/qinzk23/GoBang_Battle/include/player.h \
  /home/qinzk23/GoBang_Battle/include/strategy.h \
  /home/qinzk23/GoBang_Battle/include/robot1.h \
+ /home/qinzk23/GoBang_Battle/include/robot2.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

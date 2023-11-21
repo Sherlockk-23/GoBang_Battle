@@ -4,8 +4,8 @@
 
 namespace gobang {
 
-Game::Game(Player *bp, Player *wp, Board *board):
-    bp_(bp), wp_(wp), board_(board) {}
+Game::Game(Player *bp, Player *wp, Board *board,bool no_human=0):
+    bp_(bp), wp_(wp), board_(board) ,no_human_(no_human){}
 
 const Player *Game::GetBlackPlayer() const { return bp_; }
 const Player *Game::GetWhitePlayer() const { return wp_; }
@@ -26,8 +26,10 @@ void Game::SetBoard(Board *b) {
 
 void Game::Start() const {
     std::cout << "Game Start!" << std::endl;
-    bool is_black_turn = true;
+    bool is_black_turn = true;                  //   gotta decide who is first !!!
     while (bp_->IsInGame()) {
+
+
 	board_->Draw();
 	if (is_black_turn) {
 	    bp_->Play(board_);
@@ -44,6 +46,16 @@ void Game::Start() const {
 	}
 	is_black_turn = !is_black_turn;
 	Judge();
+
+	
+	if(no_human_){
+
+	getchar();
+	//system("clear");
+	
+	}
+
+	
     }
     board_->Draw();
     if (bp_->IsWin())

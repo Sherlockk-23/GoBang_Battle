@@ -4,7 +4,7 @@
 
 int main() {
     gobang::Board board;
-    gobang::Player player1(true,0, "PoorYou"), player2(false,1, "RoBot");
-    gobang::Game game(&player1, &player2, &board);
+    gobang::Player player1(true,1, "Robot1"), player2(false,2, "RoBot2");
+    gobang::Game game(&player1, &player2, &board,0);
     game.Start();
 }

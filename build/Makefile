@@ -262,6 +262,30 @@ src/robot1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.s
 .PHONY : src/robot1.cpp.s
 
+src/robot2.o: src/robot2.cpp.o
+.PHONY : src/robot2.o
+
+# target to build an object file
+src/robot2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o
+.PHONY : src/robot2.cpp.o
+
+src/robot2.i: src/robot2.cpp.i
+.PHONY : src/robot2.i
+
+# target to preprocess a source file
+src/robot2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.i
+.PHONY : src/robot2.cpp.i
+
+src/robot2.s: src/robot2.cpp.s
+.PHONY : src/robot2.s
+
+# target to generate assembly for a file
+src/robot2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.s
+.PHONY : src/robot2.cpp.s
+
 src/strategy.o: src/strategy.cpp.o
 .PHONY : src/strategy.o
 
@@ -311,6 +335,9 @@ help:
 	@echo "... src/robot1.o"
 	@echo "... src/robot1.i"
 	@echo "... src/robot1.s"
+	@echo "... src/robot2.o"
+	@echo "... src/robot2.i"
+	@echo "... src/robot2.s"
 	@echo "... src/strategy.o"
 	@echo "... src/strategy.i"
 	@echo "... src/strategy.s"

@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GoBang_Battle.dir/src/player.cpp.o.d"
   "CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o"
   "CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o.d"
+  "CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o"
+  "CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o.d"
   "CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o"
   "CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o.d"
   "libGoBang_Battle.pdb"

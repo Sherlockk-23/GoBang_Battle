@@ -10,7 +10,7 @@ class Game {
     static const int WIN_COUNT = 5;
     
 public:
-    Game(Player *bp, Player *wp, Board *board);
+    Game(Player *bp, Player *wp, Board *board,bool no_human);
 
     const Player *GetBlackPlayer() const;
     const Player *GetWhitePlayer() const;
@@ -32,6 +32,7 @@ private:
     Player *bp_;
     Player *wp_;
     Board *board_;
+    bool no_human_;
 };
 
 } // namespace gobang
