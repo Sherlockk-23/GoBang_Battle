@@ -59,7 +59,7 @@ bool Board::SetState(int x, int y, int state) {
 }
 
 void Board::Draw(int x,int y) const {
-    //system("clear");
+    system("clear");
     std::cout << "   ";
     for (int j = 0; j < size_; j++) {
 	std::cout << std::setw(3) << (j + 1);

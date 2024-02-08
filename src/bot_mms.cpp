@@ -61,7 +61,7 @@ void Bot_mms::get_pos(const Board* board,bool is_black,int &x,int &y){
     srand(time(0));
     init_(board,is_black);
     if( tot_<5 ){
-        pair<int,int> pos=get_actions_(1,0)[rand()%3];
+        pair<int,int> pos=get_actions_(1,0)[0];
         x=pos.first;y=pos.second;
     }
     else if(check_ending_state(1)){
@@ -69,7 +69,7 @@ void Bot_mms::get_pos(const Board* board,bool is_black,int &x,int &y){
         x=pos.first;y=pos.second;
     }
     else {
-        cout<<" begin search !!"<<endl;
+        cout<<" I'm thinking, please wait a moment !!"<<endl;
         search_cnt_=0;
         int res=max_search_(0,x,y,-1e9,1e9);
         cout<<res<<endl;

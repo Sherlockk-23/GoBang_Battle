@@ -79,6 +79,24 @@ void VAL_AGENT::init_value_map_(){
 
     all_ij
         here=0,mark_[0][id_map(i,j)]=mark_[1][id_map(i,j)]=0;
+
+    int cnt=0;                              //  more random at start
+    all_ij cnt+=(map_[id_map(i,j)]!=EMPTY);
+    if(cnt<3){
+        all_ij{                 
+            here=0;                    //  more middle
+            here +=
+                ( pow (i*(size_-i) , 2 ) + pow( j*(size_-j) ,2) )  /  (size_*size_);
+            here+=rand()%20;
+
+        }
+        all_ij{
+            if(map_[id_map(i,j)]!=EMPTY)
+                here =-1;
+        }
+        return;
+    }
+    
     
 
     all_ij if(map_[id_map(i,j)]==EMPTY)
@@ -200,28 +218,6 @@ void VAL_AGENT::init_value_map_(){
         }
     }
 
-
-    int cnt=0;                              //  more random at start
-    all_ij cnt+=(map_[id_map(i,j)]!=EMPTY);
-    if(cnt<=3)
-    all_ij{                 
-        here=0;                    //  more middle
-        here +=
-            ( pow (i*(size_-i) , 2 ) + pow( j*(size_-j) ,2) )  /  (size_*size_);
-
-    }
-
-    // if too far away
-    if (cnt)
-    all_ij if(map_[id_map(i,j)]==EMPTY){
-        bool chk=1;
-        for(int dir=0;dir<8;dir++){
-            int x=i+move_x[dir],y=j+move_y[dir];
-            if( !inmap(x,y) || map_[id_map(x,y)]!=EMPTY )
-                chk=0;
-        }
-        here -= chk*1000;
-    }
 
 
     all_ij{

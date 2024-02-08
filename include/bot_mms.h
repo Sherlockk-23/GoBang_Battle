@@ -17,7 +17,7 @@ class Bot_mms: public Strategy{
         ~Bot_mms();
     private:
 
-        const static int Depth=4, Width=4;  // W^(D*2) 
+        const static int Depth=4, Width=5;  // W^(D*2) 
         Board* my_board_;
 
         void init_(const Board* board,bool is_black);
