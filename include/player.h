@@ -5,6 +5,7 @@
 #include "strategy.h"
 #include "robot1.h"
 #include "robot2.h"
+#include "bot_mms.h"
 
 
 namespace gobang {

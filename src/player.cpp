@@ -12,6 +12,7 @@ Player::Player(bool is_black, int strategy_id, const char *name) :
 		case 0: strategy_= new Human; break;
 		case 1: strategy_= new Bot1;  break;
 		case 2: strategy_= new Bot2;  break;
+		case 3: strategy_= new Bot_mms;  break;
 	}
 }
 

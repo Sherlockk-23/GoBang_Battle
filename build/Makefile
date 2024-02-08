@@ -190,6 +190,30 @@ src/board.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/board.cpp.s
 .PHONY : src/board.cpp.s
 
+src/bot_mms.o: src/bot_mms.cpp.o
+.PHONY : src/bot_mms.o
+
+# target to build an object file
+src/bot_mms.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o
+.PHONY : src/bot_mms.cpp.o
+
+src/bot_mms.i: src/bot_mms.cpp.i
+.PHONY : src/bot_mms.i
+
+# target to preprocess a source file
+src/bot_mms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.i
+.PHONY : src/bot_mms.cpp.i
+
+src/bot_mms.s: src/bot_mms.cpp.s
+.PHONY : src/bot_mms.s
+
+# target to generate assembly for a file
+src/bot_mms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.s
+.PHONY : src/bot_mms.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -310,6 +334,30 @@ src/strategy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.s
 .PHONY : src/strategy.cpp.s
 
+src/value_agent.o: src/value_agent.cpp.o
+.PHONY : src/value_agent.o
+
+# target to build an object file
+src/value_agent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o
+.PHONY : src/value_agent.cpp.o
+
+src/value_agent.i: src/value_agent.cpp.i
+.PHONY : src/value_agent.i
+
+# target to preprocess a source file
+src/value_agent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.i
+.PHONY : src/value_agent.cpp.i
+
+src/value_agent.s: src/value_agent.cpp.s
+.PHONY : src/value_agent.s
+
+# target to generate assembly for a file
+src/value_agent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GoBang_Battle.dir/build.make CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.s
+.PHONY : src/value_agent.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -326,6 +374,9 @@ help:
 	@echo "... src/board.o"
 	@echo "... src/board.i"
 	@echo "... src/board.s"
+	@echo "... src/bot_mms.o"
+	@echo "... src/bot_mms.i"
+	@echo "... src/bot_mms.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
@@ -341,6 +392,9 @@ help:
 	@echo "... src/strategy.o"
 	@echo "... src/strategy.i"
 	@echo "... src/strategy.s"
+	@echo "... src/value_agent.o"
+	@echo "... src/value_agent.i"
+	@echo "... src/value_agent.s"
 .PHONY : help
 
 

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GoBang_Battle.dir/src/board.cpp.o"
   "CMakeFiles/GoBang_Battle.dir/src/board.cpp.o.d"
+  "CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o"
+  "CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o.d"
   "CMakeFiles/GoBang_Battle.dir/src/game.cpp.o"
   "CMakeFiles/GoBang_Battle.dir/src/game.cpp.o.d"
   "CMakeFiles/GoBang_Battle.dir/src/player.cpp.o"
@@ -11,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o.d"
   "CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o"
   "CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o.d"
+  "CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o"
+  "CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o.d"
   "libGoBang_Battle.pdb"
   "libGoBang_Battle.so"
 )

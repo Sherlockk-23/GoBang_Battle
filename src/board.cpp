@@ -40,19 +40,26 @@ bool Board::SetStateWhite(int x, int y) {
     return SetState(x, y, WHITE);
 }
 
+bool Board::SetStateEmpty(int x, int y) {
+    return SetState(x, y, EMPTY);
+}
+
 bool Board::SetState(int x, int y, int state) {
     if (x < 0 || x >= size_ || y < 0 || y >= size_)
 	return false;
     int cur_state = state_[x * size_ + y];
-    if (cur_state == EMPTY) {
+    //if (cur_state == EMPTY) 
+    if(1){
 	state_[x * size_ + y] = state;
-    lastx=x;lasty=y;
+    if(state!=EMPTY)
+        lastx=x,lasty=y;
 	return true;
     }
     return false;
 }
 
-void Board::Draw() const {
+void Board::Draw(int x,int y) const {
+    //system("clear");
     std::cout << "   ";
     for (int j = 0; j < size_; j++) {
 	std::cout << std::setw(3) << (j + 1);
@@ -63,21 +70,30 @@ void Board::Draw() const {
 	for (int j = 0; j < size_; j++) {
 	    int state = state_[i * size_ + j];
 
+        if( i==x && j==y ){
+            std::cout << "\033[5m\033[36m" << std::setw(3) << "X" << "\033[0m";
+            continue;
+        }
+
+        if (state == EMPTY){
+            //std::cout<<i<<' '<<j<<' '<<( ((i/5)&1) && ((j/5)&1) )<<std::endl;
+		    if( ( i/5 + j/5) & 1 )
+                std::cout << "\033[34m" << std::setw(3) << "+" << "\033[0m";
+            else
+                std::cout << "\033[2m\033[34m" << std::setw(3) << "+" << "\033[0m";
+            continue;
+        }
+
+
         if( i==lastx && j==lasty ){
 	        if (state == BLACK)
 		        std::cout << "\033[1m\033[33m" << std::setw(3) << "@" << "\033[0m";
-	        else
+	        else if (state == WHITE)
 		        std::cout << "\033[1m\033[33m" << std::setw(3) << "o" << "\033[0m";
+
         }
         else{
-            if (state == EMPTY){
-                //std::cout<<i<<' '<<j<<' '<<( ((i/5)&1) && ((j/5)&1) )<<std::endl;
-		        if( ( i/5 + j/5) & 1 )
-                    std::cout << "\033[34m" << std::setw(3) << "+" << "\033[0m";
-                else
-                    std::cout << "\033[2m\033[34m" << std::setw(3) << "+" << "\033[0m";
-            }
-	        else if (state == BLACK)
+	        if (state == BLACK)
 		        std::cout << "\x1B[91m" << std::setw(3) << "@" << "\033[0m";
 	        else
 		        std::cout << "\x1B[97m" << std::setw(3) << "o" << "\033[0m";
@@ -86,6 +102,7 @@ void Board::Draw() const {
 	}
 	std::cout << std::endl << std::endl;
     }
+
 }
 
 } // namespace gobang

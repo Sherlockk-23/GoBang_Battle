@@ -97,10 +97,24 @@ CMakeFiles/GoBang_Battle.dir/src/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoBang_Battle.dir/src/player.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinzk23/GoBang_Battle/src/player.cpp -o CMakeFiles/GoBang_Battle.dir/src/player.cpp.s
 
+CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o: CMakeFiles/GoBang_Battle.dir/flags.make
+CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o: ../src/robot1.cpp
+CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o: CMakeFiles/GoBang_Battle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o -MF CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o.d -o CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o -c /home/qinzk23/GoBang_Battle/src/robot1.cpp
+
+CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinzk23/GoBang_Battle/src/robot1.cpp > CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.i
+
+CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinzk23/GoBang_Battle/src/robot1.cpp -o CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.s
+
 CMakeFiles/GoBang_Battle.dir/src/game.cpp.o: CMakeFiles/GoBang_Battle.dir/flags.make
 CMakeFiles/GoBang_Battle.dir/src/game.cpp.o: ../src/game.cpp
 CMakeFiles/GoBang_Battle.dir/src/game.cpp.o: CMakeFiles/GoBang_Battle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GoBang_Battle.dir/src/game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GoBang_Battle.dir/src/game.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GoBang_Battle.dir/src/game.cpp.o -MF CMakeFiles/GoBang_Battle.dir/src/game.cpp.o.d -o CMakeFiles/GoBang_Battle.dir/src/game.cpp.o -c /home/qinzk23/GoBang_Battle/src/game.cpp
 
 CMakeFiles/GoBang_Battle.dir/src/game.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/GoBang_Battle.dir/src/game.cpp.s: cmake_force
 CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o: CMakeFiles/GoBang_Battle.dir/flags.make
 CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o: ../src/strategy.cpp
 CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o: CMakeFiles/GoBang_Battle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o -MF CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o.d -o CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o -c /home/qinzk23/GoBang_Battle/src/strategy.cpp
 
 CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.i: cmake_force
@@ -124,20 +138,6 @@ CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.i: cmake_force
 CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinzk23/GoBang_Battle/src/strategy.cpp -o CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.s
-
-CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o: CMakeFiles/GoBang_Battle.dir/flags.make
-CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o: ../src/robot1.cpp
-CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o: CMakeFiles/GoBang_Battle.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o -MF CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o.d -o CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o -c /home/qinzk23/GoBang_Battle/src/robot1.cpp
-
-CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinzk23/GoBang_Battle/src/robot1.cpp > CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.i
-
-CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinzk23/GoBang_Battle/src/robot1.cpp -o CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.s
 
 CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o: CMakeFiles/GoBang_Battle.dir/flags.make
 CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o: ../src/robot2.cpp
@@ -153,27 +153,59 @@ CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinzk23/GoBang_Battle/src/robot2.cpp -o CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.s
 
+CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o: CMakeFiles/GoBang_Battle.dir/flags.make
+CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o: ../src/bot_mms.cpp
+CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o: CMakeFiles/GoBang_Battle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o -MF CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o.d -o CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o -c /home/qinzk23/GoBang_Battle/src/bot_mms.cpp
+
+CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinzk23/GoBang_Battle/src/bot_mms.cpp > CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.i
+
+CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinzk23/GoBang_Battle/src/bot_mms.cpp -o CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.s
+
+CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o: CMakeFiles/GoBang_Battle.dir/flags.make
+CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o: ../src/value_agent.cpp
+CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o: CMakeFiles/GoBang_Battle.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o -MF CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o.d -o CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o -c /home/qinzk23/GoBang_Battle/src/value_agent.cpp
+
+CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qinzk23/GoBang_Battle/src/value_agent.cpp > CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.i
+
+CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qinzk23/GoBang_Battle/src/value_agent.cpp -o CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.s
+
 # Object files for target GoBang_Battle
 GoBang_Battle_OBJECTS = \
 "CMakeFiles/GoBang_Battle.dir/src/board.cpp.o" \
 "CMakeFiles/GoBang_Battle.dir/src/player.cpp.o" \
+"CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o" \
 "CMakeFiles/GoBang_Battle.dir/src/game.cpp.o" \
 "CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o" \
-"CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o" \
-"CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o"
+"CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o" \
+"CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o" \
+"CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o"
 
 # External object files for target GoBang_Battle
 GoBang_Battle_EXTERNAL_OBJECTS =
 
 libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/board.cpp.o
 libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/player.cpp.o
+libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o
 libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/game.cpp.o
 libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/strategy.cpp.o
-libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/robot1.cpp.o
 libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/robot2.cpp.o
+libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/bot_mms.cpp.o
+libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/src/value_agent.cpp.o
 libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/build.make
 libGoBang_Battle.so: CMakeFiles/GoBang_Battle.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libGoBang_Battle.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qinzk23/GoBang_Battle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library libGoBang_Battle.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GoBang_Battle.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

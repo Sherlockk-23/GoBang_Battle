@@ -18,10 +18,11 @@ public:
     int GetState(int x, int y) const;
     bool SetStateBlack(int x, int y);
     bool SetStateWhite(int x, int y);
+    bool SetStateEmpty(int x, int y);
 
     int CheckPos(int x,int y) const;
 
-    void Draw() const;
+    void Draw(int x=-1,int y=-1) const;
 
     int lastx,lasty;
 

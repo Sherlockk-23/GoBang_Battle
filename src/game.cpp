@@ -25,8 +25,11 @@ void Game::SetBoard(Board *b) {
 }
 
 void Game::Start() const {
+	srand(time(0));
+	system("clear");
+
     std::cout << "Game Start!" << std::endl;
-    bool is_black_turn = true;                  //   gotta decide who is first !!!
+    bool is_black_turn = rand()&1;                  //   gotta decide who is first !!!
     while (bp_->IsInGame()) {
 
 
@@ -51,10 +54,10 @@ void Game::Start() const {
 	if(no_human_){
 
 	getchar();
-	//system("clear");
 	
 	}
 
+	
 	
     }
     board_->Draw();
