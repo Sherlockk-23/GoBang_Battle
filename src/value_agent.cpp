@@ -17,6 +17,8 @@ namespace gobang{
 #define inmap(x,y) ( x>=0 && y>=0 && x<size_ && y<size_ )
 #define all_ij for(int i=0;i<size_;i++) for(int j=0;j<size_;j++)
 
+const static int T_VALUE=2000;
+
 
 VAL_AGENT::VAL_AGENT(){size_=0;}
 VAL_AGENT::~VAL_AGENT(){
@@ -277,16 +279,26 @@ vector<pair<int,int> > VAL_AGENT::get_high_positions(const Board* board, bool is
     sort(all.begin(),all.end(),
         [this](const pair<int,int>p1,const pair<int,int>p2){
             int x1=p1.first,x2=p2.first,y1=p1.second,y2=p2.second;
-            if(value_map_[x1*size_+y1]!=value_map_[x2*size_+y2])
-                return value_map_[x1*size_+y1]>value_map_[x2*size_+y2];
+            if(value_map_[id_map(x1,y1)]!=value_map_[id_map(x2,y2)])
+                return value_map_[id_map(x1,y1)]>value_map_[id_map(x2,y2)];
             if(x1!=x2)
                 return x1>x2;
             return y1>y2;
         }
     );
 
-    for(int i=0;i<min(top,(int)all.size());i++)
+    
+    /*for(int i=0;i<min(top,(int)all.size());i++)
         chosen.push_back(make_pair(all[i].first,all[i].second));
+    */
+   for(int i=0;i<min((int)all.size(),(int)(top*1.5));i++)
+        if(value_map_[id_map(all[i].first,all[i].second)]>=T_VALUE)
+            chosen.push_back(make_pair(all[i].first,all[i].second));
+    
+    if(!chosen.size())
+        for(int i=0;i<min(top,(int)all.size());i++)
+            chosen.push_back(make_pair(all[i].first,all[i].second));
+
     return chosen;
 }
 

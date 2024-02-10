@@ -72,6 +72,7 @@ void Bot_mms::get_pos(const Board* board,bool is_black,int &x,int &y){
         cout<<" I'm thinking, please wait a moment !!"<<endl;
         search_cnt_=0;
         int res=max_search_(0,x,y,-1e9,1e9);
+        if(res==-1e9)x=y=-1;
         cout<<res<<endl;
     }
     x++;y++;
@@ -102,7 +103,7 @@ int Bot_mms::max_search_(int dep,int& x,int& y,int a,int b){
             x=it->first, y=it->second;
         my_board_->SetStateEmpty(it->first,it->second);
 
-        if(res>b)return res;
+        if(res>=b)return res;
         ckmax(a,res);
     }
     return res;
@@ -127,7 +128,7 @@ int Bot_mms::min_search_(int dep,int a,int b){
         ckmin(res,tmp);
         my_board_->SetStateEmpty(it->first,it->second);
 
-        if(res<a)return res;
+        if(res<=a)return res;
         ckmin(b,res);
     }
     return res;

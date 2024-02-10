@@ -48,12 +48,15 @@ bool Board::SetState(int x, int y, int state) {
     if (x < 0 || x >= size_ || y < 0 || y >= size_)
 	return false;
     int cur_state = state_[x * size_ + y];
-    //if (cur_state == EMPTY) 
-    if(1){
-	state_[x * size_ + y] = state;
-    if(state!=EMPTY)
+    if(state!=EMPTY){
+        if(state_[x * size_ + y]!=EMPTY)return false;
         lastx=x,lasty=y;
-	return true;
+        state_[x * size_ + y] = state;
+        return true;
+    }
+    else {
+	    state_[x * size_ + y] = state;
+	    return true;
     }
     return false;
 }
